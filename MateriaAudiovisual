@@ -1,3 +1,336 @@
 git clone https://github.com/Materia/Audiovisual.github.io
 cd Materia.github.io
 echo "Bienvenidos a la materia Audiovisual" > index.html
+git add --all
+
+git commit -m "Initial commit"
+
+git push -u origin main
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cursos de Formación Audiovisual</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Bienvenidos a los Cursos de Formación Audiovisual</h1>
+            <p>Somos un grupo de profesores profesionales en la materia audiovisual, comprometidos con enseñarte la historia, el uso y las aplicaciones de los medios audiovisuales.</p>
+        </div>
+    </header>
+    
+    <section class="course-info">
+        <div class="container">
+            <h2>¿Qué aprenderás?</h2>
+            <p>En nuestros cursos aprenderás desde los cimientos de la historia audiovisual, cómo se utilizan los recursos multimedia, hasta cómo llevarlos a cabo en la práctica. Este curso está diseñado para todos los niveles, desde principiantes hasta expertos.</p>
+            <ul>
+                <li><strong>Historia:</strong> Desde los inicios del cine hasta la era digital.</li>
+                <li><strong>Aplicaciones:</strong> El uso del video, audio y multimedia en la industria moderna.</li>
+                <li><strong>Herramientas:</strong> Software y equipos que transforman la creación audiovisual.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="registration">
+        <div class="container">
+            <h2>¡Inscríbete ahora!</h2>
+            <form action="#" method="post">
+                <label for="name">Nombre completo:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="level">Nivel de conocimiento:</label>
+                <select id="level" name="level">
+                    <option value="beginner">Principiante</option>
+                    <option value="intermediate">Intermedio</option>
+                    <option value="advanced">Avanzado</option>
+                </select>
+
+                <button type="submit">Inscribirse</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Cursos Audiovisuales | Todos los derechos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+/* Reset de márgenes y paddings por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7fa;
+    color: #333;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+header {
+    background-color: #1e2a38; /* Color oscuro para contraste */
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #f1a208; /* Color amarillo para resaltar al pasar el ratón */
+}
+
+/* Sección "Sobre Nosotros" */
+#sobre-nosotros {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+}
+
+#sobre-nosotros h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1e2a38;
+}
+
+#sobre-nosotros p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 20px auto;
+    max-width: 800px;
+    color: #555;
+}
+
+/* Sección "Nuestros Cursos" */
+#cursos {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#cursos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #1e2a38;
+}
+
+.curso {
+    background-color: #fff;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.curso:hover {
+    transform: translateY(-5px);
+}
+
+.curso h3 {
+    font-size: 2rem;
+    color: #f1a208; /* Color destacado para títulos */
+    margin-bottom: 20px;
+}
+
+.curso p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Sección "Inscripción" */
+#inscripcion {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+}
+
+#inscripcion h2 {
+    font-size: 2.5rem;
+    color: #1e2a38;
+    margin-bottom: 30px;
+}
+
+#inscripcion p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 10px 0;
+    text-align: left;
+    width: 100%;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease-in-out;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #f1a208; /* Color de foco */
+    outline: none;
+}
+
+form button {
+    background-color: #f1a208;
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+form button:hover {
+    background-color: #d88905; /* Color más oscuro para hover */
+}
+
+/* Sección "Contacto" */
+#contacto {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#contacto h2 {
+    font-size: 2.5rem;
+    color: #1e2a38;
+    margin-bottom: 20px;
+}
+
+#contacto p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#contacto a {
+    color: #f1a208;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contacto a:hover {
+    text-decoration: underline;
+}
+
+/* Pie de página */
+footer {
+    background-color: #1e2a38;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Queries (Responsividad) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .curso h3 {
+        font-size: 1.8rem;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    form input,
+    form select,
+    form textarea {
+        font-size: 0.9rem;
+    }
+
+    form button {
+        font-size: 1rem;
+    }
+}
